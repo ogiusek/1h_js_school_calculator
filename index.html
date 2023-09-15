@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      font-size: 16px;
+    }
+
+    body {
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgb(5, 0, 20);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main {
+      width: 400px;
+      height: 200px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      background-color: white;
+      border-radius: 1rem;
+    }
+
+    .main input {
+      color: black;
+      margin: none;
+      margin-bottom: .5rem;
+    }
+
+    .main button {
+      user-select: none;
+      background-color: black;
+      border: none;
+      color: white;
+      padding: 0.2rem 1rem;
+      border-radius: .5rem;
+    }
+
+    .main p {
+      margin: 0;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <input id="input" placeholder="calc" oninput="onInput()" />
+    <button onclick="calc()">calc</button>
+    <p id="result">0</p>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
