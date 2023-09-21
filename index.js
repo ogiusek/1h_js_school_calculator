@@ -1,7 +1,6 @@
 const inputForm = document.getElementById("input");
 const resultHolder = document.getElementById("result");
 
-// const inputRegex = /[0-9*\/\+\-\^\\]/;
 const inputRegex = /[0-9*\/\+\-\^\√]/;
 const numbersRegex = /[0-9]/;
 const actionRegex = /[*\/\+\-\^\√]/;
@@ -19,7 +18,6 @@ function onInput() {
 function performCalculation(character, x, y) {
   let res = x;
 
-  console.log(character);
   switch (character) {
     case "*":
       res *= y;
@@ -46,7 +44,6 @@ function performCalculation(character, x, y) {
 function calc() {
   let numbers = String(inputForm.value).split(actionRegex).map(e => Number(e));
   let actions = String(inputForm.value).split(numbersRegex).filter(e => e !== "");
-
 
   if (actions.filter(e => e.length !== 1).length) return alert("wrong data");
 
